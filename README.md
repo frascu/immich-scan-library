@@ -1,6 +1,6 @@
-# Script for API Login and Scan Initiation
+# API Login and Scan Initiation Script
 
-This script performs a login request and initiates a scan using a provided API.
+This script performs API login, retrieves a list of libraries with non-empty `importPaths`, and initiates a scan for each valid library.
 
 ## Usage
 
@@ -13,24 +13,24 @@ This script performs a login request and initiates a scan using a provided API.
 2. Run the script from the command line, providing the necessary parameters:
 
     ```bash
-    python script.py <base_url> <username> <password> <library_id>
+    python script.py <base_url> <username> <password>
     ```
 
-    Replace `<base_url>`, `<username>`, `<password>`, and `<library_id>` with your specific values.
+    Replace `<base_url>`, `<username>`, and `<password>` with your specific values.
 
 ## Script Parameters
 
 - `base_url`: Base URL for the API.
 - `username`: Username for authentication.
 - `password`: Password for authentication.
-- `library_id`: Library ID for scan initiation.
 
 ## Features
 
-- Performs API login and scan initiation.
-- Supports command-line arguments for easy execution.
+- Performs API login with support for 200 and 201 status codes.
+- Retrieves a list of libraries with non-empty `importPaths`.
+- Initiates a scan for each valid library.
 
-## Important Note
+## Important Notes
 
 - This script uses the `requests` library for HTTP requests.
 - The `verify=False` argument is used to ignore SSL verification. Use it with caution and consider securing your connection appropriately.
