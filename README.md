@@ -13,7 +13,7 @@ This script performs API login, retrieves a list of libraries with non-empty `im
 2. Run the script from the command line, providing the necessary parameters:
 
     ```bash
-    python script.py <base_url> <username> <password>
+    python scan.py <base_url> <username> <password>
     ```
 
     Replace `<base_url>`, `<username>`, and `<password>` with your specific values.
